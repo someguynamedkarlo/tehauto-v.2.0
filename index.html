@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tehauto</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allerta&family=Heebo:wght@200;300&display=swap" rel="stylesheet">
+<script src="/node_modules/swup/dist/swup.min.js"></script>
+<script src="script.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+</head>
+<body>
+  <div class="container">
+   
+   
+    
+    <nav>
+        <div class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Početna</a></li>
+                <li><a href="rv.html">Radno vrijeme</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li><a href="lokacija.html">Lokacija</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+
+   <main class="main">
+       <section data-router-view="Home" class="Home">
+        <h1>Tehauto</h1>
+       </section>
+   </main>
+</div>
+  <script>
+      gsap.from("main", {opacity: 0, duration: 1.5,y:-50 ,ease: Circ.easeOut})
+     
+      if (innerWidth<700){document.location="index2.html"}
+  </script>
+  
+</body>
+</html>
